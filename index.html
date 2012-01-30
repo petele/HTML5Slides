@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--
+Copyright 2011 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Based on HTML5Slides from http://code.google.com/p/html5slides/
+  Authors: Luke MahŽ (code)
+           Marcin Wichary (code and design)
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+Modified and updated by:
+  Authors: Eric Bidelman (ericbidelman@chromium.org)
+           Pete LePage (petele@google.com)
+
+-->
+
+<html manifest="TODO">
+<head>
+  <title data-config-title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|Droid+Sans+Mono&v2">
+</head>
+
+<body style="display: none">
+
+<section class='slides layout-regular'>
+
+  <article class="title-slide">
+    <div>
+      <div data-config-logo></div>
+      <p data-config-name></p>
+      <p data-config-subtitle></p>
+      <h1 data-config-title></h1>
+      <p class="info">
+        <time datetime="YYYY-MM-DD" data-config-date>MM DD, 2011</time> &nbsp; - &nbsp; <span data-config-location></span>
+      </p>
+      <img data-config-map class="rounded" title="Of course we're using Geolocation!" alt="Of course we're using Geolocation!">
+    </div>
+  </article>
+  
+  <article id="who">
+    <h3>Who?</h3>
+    <p>
+      <img class="avatar rounded" data-config-pic>
+    </p>
+    <p>
+      <a rel="author" data-config-gplus target="_blank">
+        <img src="http://www.google.com/images/icons/ui/gprofile_button-44.png" width="44" height="44">
+      </a> +<a rel="author" data-config-gplus target="_blank"><span data-config-name></span></a>
+    </p>
+    <br>
+    <p>
+      <a rel="author" data-config-twitter target="_blank" style="margin-left:-8px;">
+        <img src="images/twitter_newbird_blue.png" width="58" height="58">
+      </a> @ <a rel="author" data-config-twitter target="_blank" style="margin-left:-8px;"><span data-config-twitter></span></a>
+    </p>
+    <p>
+      <a rel="author" data-config-blog target="_blank"><span data-config-blog></span></a>
+    </p>
+  </article>
+
+  <article class="agenda">
+    <h3>Agenda</h3>
+    <ul class="build fade">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </article>
+      
+  <article>
+    <p>
+      This is a slide with just text. This is a slide with just text.
+      This is a slide with just text. This is a slide with just text.
+      This is a slide with just text. This is a slide with just text.
+    </p>
+    <p>
+      There is more text just underneath.
+    </p>
+  </article>
+ 
+  <article>
+    <h3>
+      Slide with bullet points that builds
+    </h3>
+    <ul class="build fade">
+      <li>
+        This is an example of a list
+      </li>
+      <li>
+        The list items fade in
+      </li>
+      <li>
+        And dim as they move to the next
+      </li>
+      <li>
+        Last one!
+      </li>
+    </ul>
+
+    <div class="build">
+      <p>Any element with child nodes can build.</p>
+      <p>It doesn't have to be a list.</p>
+    </div>
+    
+    <div class="build">
+      <p>You can also hover over the a faded item to make it re-darken</p>
+    </div>
+  </article>
+  
+  <article>
+    <h3>More about builds</h3>
+    <div class="build">
+      <ul>
+        <li>But this is.</li>
+        <li>And it will build in,</li>
+        <li>as a whole block because</li>
+        <li>the &lt;ul&gt; containing the &lt;li&gt;'s</li>
+        <li>don't have a class="build"</li>
+      </ul>
+      <div><p>This &lt;div&gt; has a class="build" though</p></div>
+    </div>
+    <div>
+      <p>
+        This isn't in a build block, so it just appears
+      </p>
+    </div>
+  </article>
+  
+  <article class="segue">
+    <h2>
+      Segue slide
+    </h2>
+  </article>  
+  
+  <article>
+    <h3>A slide with some code</h3>
+
+    <pre>&lt;a href="src/star.mp3" draggable="true" class="dragout"
+  data-downloadurl="<b>MIMETYPE:FILENAME:ABSOLUTE_URI_TO_FILE</b>"&gt;
+download
+&lt;/a&gt;</pre>
+
+<pre>var files = document.querySelectorAll('.dragout');
+for (var i = 0, file; file = files[i]; ++i) {
+  <b>file.addEventListener</b>('dragstart', function(e) {
+    e.dataTransfer.setData('DownloadURL', this.dataset.downloadurl);
+  }, false);
+}</pre>
+
+    <div>
+      <p>You can even <b>&lt;b&gt;</b> the code you want to highlight!</p>
+    </div>
+  </article>
+  
+  <article>
+    <h3>
+      Slide with an image
+    </h3>
+    <p>
+      <img style='height: 500px' src='images/example-graph.png'>
+    </p>
+    <div class='source'>
+      Source: Sergey Brin
+    </div>
+  </article>
+
+  <article>
+    <h3>
+      Slide with an image (centered)
+    </h3>
+    <p>
+      <img class='centered' style='height: 500px' src='images/example-cat.jpg'>
+    </p>
+  </article> 
+
+  <article class="fill">
+    <img src='images/html5_starburst.png'>
+  </article>
+  
+  <article class="hiddenByConfig">
+    <h3>
+      Slide with an image (centered) (and hidden)
+    </h3>
+    <p>
+      <img class='centered' style='height: 500px' src='images/example-graph.png'>
+    </p>
+    <div class='source'>
+      Source: Larry Page
+    </div>
+  </article> 
+  
+  <article class="fill">
+    <h3 class="transparent">Builds & Full Screen Images</h3>
+    <img src="images/html5_starburst.png">
+    <div class="build">
+      <div class="overlaybox">
+        <p>
+          Or, you can have an overlay appear over
+          a central image, and add text, &lt;li&gt;'s
+          or whatever other elements you want.
+        </p>
+        <div class="build">
+          <p>You can even have those elements <em>build!</em></p>
+        </div>
+      </div>
+    </div>
+  </article>
+ 
+
+  <article class="nobackground fill">
+    <h2 class="shadow-banner">iFramed Link</h2>
+    <iframe src='http://html5rocks.com'></iframe>
+  </article>
+
+  <article class="closing-slide">
+    <div>
+      <div data-config-logo></div>
+      <p id="end-thanks">Thanks!</p>
+      <h3 id="end-questions">Questions?</h3>
+      <p>
+        <a rel="author" data-config-gplus target="_blank">+<span data-config-name></span></a>
+        <a rel="author" data-config-twitter target="_blank">@<span data-config-twitter></span></a>
+      </p>
+      <p class="info">
+        Slides: <a data-config-slides target="_blank"><span data-config-slides></span></a><br>
+        Feedback: <a data-config-feedback target="_blank"><span data-config-feedback></span></a><br>
+      </p>
+    </div>
+  </article>
+
+</section>
+
+<script src="js/config.js"></script>
+<script src='js/slides.js'></script>
+
+<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+<script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+
+</body>
+</html>
