@@ -44,14 +44,14 @@ limitations under the License.
       <p class="info">
         <time datetime="YYYY-MM-DD" data-config-date>MM DD, 2011</time> &nbsp; - &nbsp; <span data-config-location></span>
       </p>
-      <img data-config-map class="rounded" title="Of course we're using Geolocation!" alt="Of course we're using Geolocation!">
+      <img data-config-map title="Of course we're using Geolocation!" alt="Of course we're using Geolocation!">
     </div>
   </article>
 
   <article id="who">
     <h3>Who?</h3>
     <p>
-      <img class="avatar rounded" data-config-pic>
+      <img class="avatar" data-config-pic>
     </p>
     <p>
       <a rel="author" data-config-gplus target="_blank">
@@ -188,7 +188,7 @@ for (var i = 0, file; file = files[i]; ++i) {
     <img src='images/html5_starburst.png'>
   </article>
 
-  <article class="hiddenByConfig">
+  <article class="hide">
     <h3>
       Slide with an image (centered) (and hidden)
     </h3>
@@ -201,7 +201,7 @@ for (var i = 0, file; file = files[i]; ++i) {
   </article>
 
   <article class="fill">
-    <h3 class="transparent">Builds & Full Screen Images</h3>
+    <h3 class="transparent">Builds &amp; Full Screen Images</h3>
     <img src="images/html5_starburst.png">
     <div class="build">
       <div class="overlaybox">
@@ -239,14 +239,17 @@ for (var i = 0, file; file = files[i]; ++i) {
     </div>
   </article>
 
+  <article class="biglogo">
+  </article>
+
 </section>
 
 <script src="js/config.js"></script>
 <script src='js/slides.js'></script>
 
 <!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-<script>CFInstall.check({mode: 'overlay'});</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
 <![endif]-->
 
 </body>

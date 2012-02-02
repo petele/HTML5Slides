@@ -499,6 +499,11 @@ function addGeneralStyle() {
   el.type = 'text/css';
   el.href = PERMANENT_URL_PREFIX + 'css/styles.css';
   document.body.appendChild(el);
+  el = document.createElement('link');
+  el.rel = 'stylesheet';
+  el.type ='text/css';
+  el.href = PERMANENT_URL_PREFIX + 'css/user.css';
+  document.body.appendChild(el);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
@@ -526,7 +531,7 @@ function makeBuildLists() {
 };
 
 function handleDomLoaded() {
-  slideEls = document.querySelectorAll('section.slides > article:not(.hidden)');
+  slideEls = document.querySelectorAll('section.slides > article:not(.hide)');
 
   addGeneralStyle();
   addPrettify();
