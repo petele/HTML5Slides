@@ -1,3 +1,27 @@
+/*
+Copyright 2012 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+  Based on HTML5Slides from http://code.google.com/p/html5slides/
+  Special thanks to: Eric Bidelman, Luke MahŽ, Marcin Wichary,
+                     Dominic Mazzoni, Charles Chen
+
+  Authors: Chris Wilson (cwilso@chromium.org)
+           Pete LePage (petele@google.com)
+*/
+
 html {
   height: 100%;
   overflow: hidden;
@@ -26,7 +50,7 @@ body {
   height: 100%;
   left: 0;
   top: 0;
-  
+
   position: absolute;
 
   -webkit-transform: translate3d(0, 0, 0);
@@ -46,7 +70,7 @@ body {
 
   margin-left: -450px;
   margin-top: -350px;
-  
+
   padding: 40px 60px;
 
   box-sizing: border-box;
@@ -112,7 +136,7 @@ body {
   content: '#HashTag In styles.css';
 }
 
- 
+
 
 .slides.layout-widescreen > article:not(.nobackground):not(.biglogo),
 .slides.layout-faux-widescreen > article:not(.nobackground):not(.biglogo) {
@@ -128,14 +152,14 @@ body {
   left: 0;
   top: 0;
   width: 150px;
-  height: 700px;  
+  height: 700px;
 
   left: 50%;
   top: 50%;
 
-  cursor: pointer;  
-  margin-top: -350px;  
-  
+  cursor: pointer;
+  margin-top: -350px;
+
   tap-highlight-color: transparent;
   -o-tap-highlight-color: transparent;
   -moz-tap-highlight-color: transparent;
@@ -400,7 +424,7 @@ pre {
   font-size: 20px;
   line-height: 28px;
   padding: 5px 10px;
-  
+
   letter-spacing: -1px;
 
   margin-bottom: 40px;
@@ -409,7 +433,7 @@ pre {
   background: rgb(240, 240, 240);
   border: 1px solid rgb(224, 224, 224);
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, .1);
-  
+
   overflow: hidden;
 }
 
@@ -533,7 +557,7 @@ th {
   padding-right: 175px;
 
   font-size: 12px;
-  letter-spacing: 0;  
+  letter-spacing: 0;
   line-height: 18px;
 }
 .source a {
@@ -543,39 +567,39 @@ q {
   display: block;
   font-size: 60px;
   line-height: 72px;
-  
+
   margin-left: 20px;
-  
+
   margin-top: 100px;
-  margin-right: 150px;    
+  margin-right: 150px;
 }
 q::before {
   content: '“';
-  
+
   position: absolute;
   display: inline-block;
   margin-left: -2.1em;
   width: 2em;
   text-align: right;
-  
+
   font-size: 90px;
   color: rgb(192, 192, 192);
 }
 q::after {
   content: '”';
 
-  position: absolute;  
+  position: absolute;
   margin-left: .1em;
 
   font-size: 90px;
-  color: rgb(192, 192, 192);  
+  color: rgb(192, 192, 192);
 }
 div.author {
-  text-align: right;  
+  text-align: right;
   font-size: 40px;
-  
+
   margin-top: 20px;
-  margin-right: 150px;    
+  margin-right: 150px;
 }
 div.author::before {
   content: '—';
@@ -637,27 +661,27 @@ article.smaller q::after {
 
 .prettyprint .str, /* string content */
 .prettyprint .atv { /* a markup attribute value */
-  color: rgb(0, 138, 53); 
-}  
+  color: rgb(0, 138, 53);
+}
 .prettyprint .kwd, /* a keyword */
 .prettyprint .tag { /* a markup tag name */
   color: rgb(0, 102, 204);
 }
 .prettyprint .com { /* a comment */
-  color: rgb(127, 127, 127); 
-  font-style: italic; 
-}  
+  color: rgb(127, 127, 127);
+  font-style: italic;
+}
 .prettyprint .lit { /* a literal value */
   color: rgb(127, 0, 0);
-}  
+}
 .prettyprint .pun, /* punctuation, lisp open bracket, lisp close bracket */
-.prettyprint .opn, 
-.prettyprint .clo { 
-  color: rgb(127, 127, 127); 
+.prettyprint .opn,
+.prettyprint .clo {
+  color: rgb(127, 127, 127);
 }
 .prettyprint .typ, /* a type name */
-.prettyprint .atn, /* a markup attribute name */ 
-.prettyprint .dec, 
+.prettyprint .atn, /* a markup attribute name */
+.prettyprint .dec,
 .prettyprint .var { /* a declaration; a variable name */
   color: rgb(127, 0, 127);
 }
@@ -864,12 +888,12 @@ article.smaller q::after {
   width: 100%;
   box-shadow: 0 1px 5px #333;
   box-sizing: border-box;
-  
+
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
-  
+
   text-align: right;
-  
+
   text-shadow: 1px 1px 3px black;
 }
 

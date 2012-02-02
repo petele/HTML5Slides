@@ -14,20 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 
-Based on HTML5Slides from http://code.google.com/p/html5slides/
-  Authors: Luke Mahé (code)
-           Marcin Wichary (code and design)
-           Dominic Mazzoni (browser compatibility)
-           Charles Chen (ChromeVox support)
+  Based on HTML5Slides from http://code.google.com/p/html5slides/
+  Special thanks to: Eric Bidelman, Luke Mahé, Marcin Wichary,
+                     Dominic Mazzoni, Charles Chen
 
-More recently updated with content from http://code.google.com/p/io-2011-slides/
-
-Modified and updated by:
-  Authors: Eric Bidelman (ericbidelman@chromium.org)
+  Authors: Chris Wilson (cwilso@chromium.org)
            Pete LePage (petele@google.com)
-
 */
-
 
 window.slides = window.slides || {};
 var slidesConfig = window.slidesConfig || {};
