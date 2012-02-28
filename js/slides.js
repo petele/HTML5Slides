@@ -408,12 +408,14 @@ function handleBodyKeyDown(event) {
   switch (event.keyCode) {
     case 39: // right arrow
     case 34: // PgDn
+      sendPresenterMessage('nextSlide');
       nextSlide();
       event.preventDefault();
       break;
 
     case 37: // left arrow
     case 33: // PgUp
+      sendPresenterMessage('prevSlide');
       prevSlide();
       event.preventDefault();
       break;
@@ -444,6 +446,10 @@ function handleBodyKeyDown(event) {
       document.body.classList.remove('with-notes');
       break;
 
+    case 80: // P (Presenter View)
+      presenterView();
+      break;
+
     case 13: // Enter
     case 70: // F
        // Only respect 'f'/enter on body. Don't want to capture keys from <input>
@@ -465,9 +471,33 @@ function handlePopState(event) {
   }
 };
 
+function presenterView() {
+  var url = window.location.origin + window.location.pathname;
+  url += '?view=Presenter&slide=' + window.location.hash;
+  window.open(url, 'presenterView');
+}
+
+function handlePresenterMessage(evt) {
+  console.log('Presenter Mode Event:', evt.data, evt);
+  if (evt.data === 'nextSlide') {
+    nextSlide();
+  } else if (evt.data === 'prevSlide') {
+    prevSlide();
+  }
+}
+
+function sendPresenterMessage(command) {
+  if (window.opener !== null) {
+    window.opener.postMessage(command, window.opener.location.origin);
+  } else if (false) {
+    // pass
+  }
+}
+
 function addEventListeners() {
   document.addEventListener('keydown', handleBodyKeyDown, false);
   window.addEventListener('popstate', handlePopState, false);
+  window.addEventListener('message', handlePresenterMessage, false);
 };
 
 /* Initialization */
@@ -610,16 +640,11 @@ function handleDomLoaded() {
   }, maximumAge);
 
   // Start Timer
-  //var t = presentationTimer(slidesConfig.info.date, slidesConfig.info.minutes, slidesConfig.info.warnAt);
-  //t.start();
-  window.pt.start(60, 5);
-  console.log(window.pt.stopTime);
+  var t = presentationTimer(slidesConfig.info.date, slidesConfig.info.minutes, slidesConfig.info.warnAt);
+  t.start();
 
   document.body.classList.add('loaded');
 };
-
-function runPreflight(e) {
-}
 
 function initialize() {
   getCurSlideFromHash();

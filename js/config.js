@@ -55,3 +55,7 @@ window.slidesConfig = window.slidesConfig || {
     warnAt: 10
   }
 };
+
+function runPreflight(e) {
+  // Insert your custom preflight code here
+}

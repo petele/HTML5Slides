@@ -79,6 +79,32 @@ limitations under the License.
   </article>
 
   <article>
+    <h3>Presenter View</h3>
+    <p>
+      To open presenter view, press the P key.  To close it, close the
+      window that was opened.
+    </p>
+    <button onclick='postMsg()'>Post</button>
+    <script type="text/javascript">
+      function postMsg() {
+        sendPresenterMessage('hello there');
+      }
+    </script>
+  </article>
+
+  <article>
+    <h3>This slide has notes</h3>
+    <p>You can press N to get notes to show up</p>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Prefixed in Chrome: <code>webkitvisibilitychange</code>, <code>document.webkitHidden</code>,
+          <code>document.webkitVisibilityState</code></li>
+          <li><a href="http://msdn.microsoft.com/en-us/ie/hh272906.aspx" target="_blank">IE10 implementation</a></li>
+          <li><a href="http://code.google.com/chrome/whitepapers/prerender.html" target="_blank">Prerendering documentation</a></li>
+        </ul>
+      </section>
+    </aside>
     <p>
       This is a slide with just text. This is a slide with just text.
       This is a slide with just text. This is a slide with just text.
